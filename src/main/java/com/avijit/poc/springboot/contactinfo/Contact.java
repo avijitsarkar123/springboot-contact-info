@@ -7,6 +7,7 @@ public class Contact {
 	@Id
 	private String id;
 	private String firstName;
+	private String middleName;
 	private String lastName;
 	private String address;
 	private String phoneNumber;
@@ -38,6 +39,14 @@ public class Contact {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public String getMiddleName() {
+		return middleName;
+	}
+
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
 	}
 
 	public String getAddress() {

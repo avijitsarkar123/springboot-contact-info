@@ -1,7 +1,7 @@
 #this is yml file for contactinfo micro service
 
 contactinfoms:
-     image: avijitsarkar123/contactinfo-ms:1.0
+     image: avijitsarkar123/springboot-contact-info:latest
      
      environment:
           contactinfodb_db_host: ${contactinfodb_PORT_27017_TCP_ADDR}
