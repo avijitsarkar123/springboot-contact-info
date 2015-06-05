@@ -1,0 +1,27 @@
+#this is yml file for contactinfo micro service
+
+contactinfoms:
+     image: avijitsarkar123/contactinfo-ms:1.0
+     
+     environment:
+          contactinfodb_db_host: ${contactinfodb_PORT_27017_TCP_ADDR}
+          contactinfodb_db_port: ${contactinfodb_PORT_27017_TCP_PORT}
+        
+     ports:
+          - "127.0.0.1:8080:8080"
+          
+     links:
+          - contactinfodb
+
+contactinfodb:
+     image: avijitsarkar123/ubuntu_mongodb
+      
+     environment:
+          SERVICE_NAME: contactinfodb
+          SERVICE_TAGS: poc
+ 
+     volumes:
+          - /opt/mongodb:/data/db
+ 
+     ports:
+          - "27099:27017"

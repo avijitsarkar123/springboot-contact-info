@@ -1,0 +1,4 @@
+com/avijit/poc/springboot/contactinfo/ContactInfoApplication.class
+com/avijit/poc/springboot/contactinfo/ContactRestController.class
+com/avijit/poc/springboot/contactinfo/ContactRepository.class
+com/avijit/poc/springboot/contactinfo/Contact.class
