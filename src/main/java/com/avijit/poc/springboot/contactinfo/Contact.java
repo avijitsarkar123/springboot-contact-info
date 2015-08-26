@@ -4,104 +4,63 @@ import org.springframework.data.annotation.Id;
 
 public class Contact {
 
-	@Id
-	private String id;
-	private String firstName;
-	private String middleName;
-	private String lastName;
-	private String address;
-	private String phoneNumber;
-	private String email;
-	private String twitterHandle;
-	private String facebookProfile;
-	private String linkedInProfile;
-	private String googlePlusProfile;
-
-	public String getId() {
+    @Id
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String city;
+    private String state;
+    private String country;
+    private String zip;
+    	
+    public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
 	public String getFirstName() {
 		return firstName;
 	}
-
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
 	public String getLastName() {
 		return lastName;
 	}
-
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
-	public String getMiddleName() {
-		return middleName;
-	}
-
-	public void setMiddleName(String middleName) {
-		this.middleName = middleName;
-	}
-
 	public String getAddress() {
 		return address;
 	}
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getCity() {
+		return city;
 	}
-
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setCity(String city) {
+		this.city = city;
 	}
-
-	public String getEmail() {
-		return email;
+	public String getState() {
+		return state;
 	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setState(String state) {
+		this.state = state;
 	}
-
-	public String getTwitterHandle() {
-		return twitterHandle;
+	public String getCountry() {
+		return country;
 	}
-
-	public void setTwitterHandle(String twitterHandle) {
-		this.twitterHandle = twitterHandle;
+	public void setCountry(String country) {
+		this.country = country;
 	}
-
-	public String getFacebookProfile() {
-		return facebookProfile;
+	public String getZip() {
+		return zip;
 	}
-
-	public void setFacebookProfile(String facebookProfile) {
-		this.facebookProfile = facebookProfile;
+	public void setZip(String zip) {
+		this.zip = zip;
 	}
-
-	public String getLinkedInProfile() {
-		return linkedInProfile;
-	}
-
-	public void setLinkedInProfile(String linkedInProfile) {
-		this.linkedInProfile = linkedInProfile;
-	}
-
-	public String getGooglePlusProfile() {
-		return googlePlusProfile;
-	}
-
-	public void setGooglePlusProfile(String googlePlusProfile) {
-		this.googlePlusProfile = googlePlusProfile;
-	}
+	
 }
