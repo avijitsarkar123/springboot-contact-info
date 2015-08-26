@@ -1,7 +1,5 @@
 package com.avijit.poc.springboot.contactinfo;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,8 +15,10 @@ public class ContactRestController {
 	private ContactRepository repo;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public List<Contact> getAll() {
-		return repo.findAll();
+	public DetailedResponse getAll() {
+		DetailedResponse response = new DetailedResponse();
+		response.setContactList(repo.findAll());
+		return response;
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
@@ -34,15 +34,13 @@ public class ContactRestController {
 	@RequestMapping(method = RequestMethod.PUT, value = "{id}")
 	public Contact update(@PathVariable String id, @RequestBody Contact contact) {
 		Contact update = repo.findOne(id);
-		update.setAddress(contact.getAddress());
-		update.setEmail(contact.getEmail());
-		update.setFacebookProfile(contact.getFacebookProfile());
 		update.setFirstName(contact.getFirstName());
-		update.setGooglePlusProfile(contact.getGooglePlusProfile());
 		update.setLastName(contact.getLastName());
-		update.setLinkedInProfile(contact.getLinkedInProfile());
-		update.setPhoneNumber(contact.getPhoneNumber());
-		update.setTwitterHandle(contact.getTwitterHandle());
+		update.setAddress(contact.getAddress());
+		update.setCity(contact.getCity());
+		update.setState(contact.getState());
+		update.setCountry(contact.getCountry());
+		update.setZip(contact.getZip());
 		return repo.save(update);
 	}
 
